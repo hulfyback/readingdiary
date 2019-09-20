@@ -1,4 +1,4 @@
-FROM openjdk
+FROM openjdk:8
 LABEL maintainer="Zsolt Molnar <hulfyback@gmail.com>"
 ADD gradle/wrapper/gradle-wrapper.jar reading_diary.jar
 ENTRYPOINT ["java", "-jar", "/reading_diary.jar"]
