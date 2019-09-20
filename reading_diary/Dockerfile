@@ -1,5 +1,5 @@
-FROM openjdk:8
+FROM openjdk:8-jdk-alpine
 LABEL maintainer="Zsolt Molnar <hulfyback@gmail.com>"
 ADD gradle/wrapper/gradle-wrapper.jar reading_diary.jar
 ENTRYPOINT ["java", "-jar", "/reading_diary.jar"]
-EXPOSE 8081
+# EXPOSE 8081
