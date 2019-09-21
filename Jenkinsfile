@@ -4,14 +4,10 @@ pipeline {
   stages {
     stage('Compile Stage') {
       steps {
-        sh 'cd reading_diary'
-        sh './gradlew compileJava'
-      }
-    }
-    stage('Docker Stage') {
-      steps {
-        sh 'cd reading_diary'
-        sh 'docker build -t reading_diary:latest ./reading_diary'
+        dir("reading_diary") {
+          sh "pwd"
+          sh './gradlew compileJava'
+        }
       }
     }
   }
