@@ -4,22 +4,14 @@ pipeline {
   stages {
     stage('Compile Stage') {
       steps {
-        sh 'gradle compTest'
+        sh 'cd reading_diary'
+        sh './gradlew compileJava'
       }
     }
-    stage('Test Stage') {
+    stage('Docker Stage') {
       steps {
-        sh 'gradle test --continuous'
-      }
-    }
-    stage('Build Stage') {
-      steps {
-        sh 'gradle build'
-      }
-    }
-    stage('Run Stage') {
-      steps {
-        sh 'gradle bootRun'
+        sh 'cd reading_diary'
+        sh 'docker build -t reading_diary:latest ./reading_diary'
       }
     }
   }
