@@ -5,9 +5,8 @@ pipeline {
     stage('Compile Stage') {
       steps {
         dir("reading_diary") {
-          sh "ls -la ${pwd()}"       
+          bat '.\gradlew compileJava'      
         }
-        sh "ls -la ${pwd()}"
       }
     }
   }
