@@ -5,9 +5,8 @@ pipeline {
     stage('Compile Stage') {
       steps {
         dir("reading_diary") {
-          sh "pwd"          
+          bat './gradlew compileJava'      
         }
-        sh './gradlew compileJava'
       }
     }
   }
