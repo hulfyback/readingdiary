@@ -31,13 +31,18 @@ pipeline {
         dir('reading_diary') {
           bat 'docker build -t "reading_diary:latest" .'
         }
-        bat 'docker run --rm -p 8081:8081 --name reading-diary reading_diary:latest -d reading_diary'
       }
     }
-    stage('Stop Running') {
-      steps {
+    stage('Run Application') {
+      try {        
+        bat 'docker run --rm -p 8081:8081 --name reading-diary reading_diary:latest -d reading_diary'
+      }
+      catch (error) {
+
+      }
+      finally {
         bat 'docker stop reading-diary'
-        bat 'docker rmi reading-diary:latest'
+        bat 'docker rmi reading_diary:latest'
       }
     }
   }
