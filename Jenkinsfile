@@ -34,5 +34,11 @@ pipeline {
         bat 'docker run --rm -p 8081:8081 --name reading-diary reading_diary:latest -d reading_diary'
       }
     }
+    stage('Stop Running') {
+      steps {
+        bat 'docker stop reading-diary'
+        bat 'docker rmi reading-diary:latest'
+      }
+    }
   }
 }
