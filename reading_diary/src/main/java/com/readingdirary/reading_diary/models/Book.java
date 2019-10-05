@@ -22,4 +22,8 @@ public class Book {
   private long id;
   @NonNull
   private String title;  
+  @NonNull
+  private String author;
+  @NonNull
+  private String note;
 }
