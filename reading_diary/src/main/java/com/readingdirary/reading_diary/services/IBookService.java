@@ -6,6 +6,5 @@ import com.readingdirary.reading_diary.models.Book;
 
 public interface IBookService {
 
-  public void saveBook(String title);
   public List<Book> findAllBooks();
 }
