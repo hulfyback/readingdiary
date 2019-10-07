@@ -1,10 +1,11 @@
-package com.readingdirary.reading_diary.services;
+package com.readingdirary.reading_diary.services.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.readingdirary.reading_diary.models.Book;
 import com.readingdirary.reading_diary.repositories.IBookRepository;
+import com.readingdirary.reading_diary.services.IBookService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,12 +14,6 @@ import org.springframework.stereotype.Service;
 public class BookServiceImpl implements IBookService {
   @Autowired
   private IBookRepository bookRepository;
-
-  @Override
-  public void saveBook(String title) {
-    Book book = new Book(title);
-    bookRepository.save(book);
-  }
 
   @Override
   public List<Book> findAllBooks() {
