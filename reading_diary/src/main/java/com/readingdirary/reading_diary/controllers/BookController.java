@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class BookController {
-
   @Autowired
-  IBookService bookService;
+  private IBookService bookService;
 
   @GetMapping("books")
   public String getBooks(Model model){
