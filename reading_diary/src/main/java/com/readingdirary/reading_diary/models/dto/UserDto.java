@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 public class UserDto implements Serializable{
   
-  private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 7780583779775552564L;
   private long id;
   private String userId;
   private String userName;

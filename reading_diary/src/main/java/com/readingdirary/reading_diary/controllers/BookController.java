@@ -12,6 +12,11 @@ public class BookController {
   @Autowired
   private IBookService bookService;
 
+  @GetMapping("/add_new_book")
+  public String addBook(){
+    return "add_new_book";
+  }
+
   @GetMapping("books")
   public String getBooks(Model model){
     model.addAttribute("books", bookService.findAllBooks());

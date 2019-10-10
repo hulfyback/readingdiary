@@ -15,8 +15,8 @@ import lombok.Setter;
 @Setter
 @Entity(name = "users")
 public class UserEntity implements Serializable {
-  
-  private static final long serialVersionUID = 536871008L;
+
+  private static final long serialVersionUID = 7931262933536448973L;
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
@@ -28,6 +28,7 @@ public class UserEntity implements Serializable {
   private String email;
   @Column(nullable = false)
   private String encryptedPassword;
+  @Column(nullable = true)
   private String emailVerificationToken;
   @Column(nullable = false)
   private Boolean emailVerificationStatus = false;  

@@ -1,10 +1,11 @@
-package com.readingdirary.reading_diary.services;
+package com.readingdirary.reading_diary.services.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.readingdirary.reading_diary.models.Book;
 import com.readingdirary.reading_diary.repositories.IBookRepository;
+import com.readingdirary.reading_diary.services.IBookService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

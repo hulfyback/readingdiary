@@ -5,6 +5,5 @@ import java.util.List;
 import com.readingdirary.reading_diary.models.Book;
 
 public interface IBookService {
-
   public List<Book> findAllBooks();
 }

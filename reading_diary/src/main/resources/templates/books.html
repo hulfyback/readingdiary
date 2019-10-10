@@ -6,11 +6,8 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    <table>
-      <tr th:each="book : ${books}">
-        <td th:text="${book.getAuthor()}"></td>
-        <td th:text="${book.getTitle()}"></td>
-      </tr>
-    </table>
+    <tr th:each="book : ${books}">
+      <td th:text="${book.getTitle()}"></td>
+    </tr>
   </body>
 </html>
