@@ -6,4 +6,6 @@ import com.readingdirary.reading_diary.models.dto.UserDto;
 public interface IUserService extends UserDetailsService {
 
 	UserDto createUser(UserDto userDto);
+	UserDto getUser(String email);
+	
 }
